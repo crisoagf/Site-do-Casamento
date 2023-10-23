@@ -67,6 +67,7 @@ section.svelte-117x5w7.svelte-117x5w7{background:var(--color-background, black);
 
     /* switch direction for even items */
 }.teaser.svelte-117x5w7 .content-section.svelte-117x5w7{place-items:flex-start}.teaser.svelte-117x5w7:nth-child(odd) img.svelte-117x5w7{grid-row:1;grid-column:2}.teaser.svelte-117x5w7:nth-child(even) img.svelte-117x5w7{grid-row:1;grid-column:1}}@media(min-width: 1200px){section.svelte-117x5w7.svelte-117x5w7{gap:6rem}.teaser.svelte-117x5w7.svelte-117x5w7{gap:10rem}.heading.svelte-117x5w7.svelte-117x5w7{margin-bottom:5rem}.body.svelte-117x5w7.svelte-117x5w7{margin-bottom:2.5rem}}
+.section-container.svelte-o9z257.svelte-o9z257{display:grid;justify-content:center}.card.svelte-o9z257.svelte-o9z257{padding:4rem clamp(2rem, 10vw, 7rem);border:1px solid var(--border-color, #eee);border-radius:var(--border-radius);text-align:center;display:grid}.heading.svelte-o9z257.svelte-o9z257{margin-bottom:1.5rem}.body.svelte-o9z257.svelte-o9z257{max-width:700px;margin-bottom:2.25rem}.buttons.svelte-o9z257.svelte-o9z257{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}.buttons.svelte-o9z257 .button.svelte-o9z257{display:flex;align-items:center;gap:0.25rem}
 .section-container.svelte-1rsfiza.svelte-1rsfiza{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}.logo.svelte-1rsfiza.svelte-1rsfiza{font-family:Migra;font-size:1.5rem;font-weight:600;line-height:1.2}.desktop-nav.svelte-1rsfiza.svelte-1rsfiza{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-1rsfiza nav.svelte-1rsfiza{display:flex;gap:2rem}.desktop-nav.svelte-1rsfiza nav a.link.svelte-1rsfiza{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-1rsfiza nav a.link.svelte-1rsfiza:hover{border-color:initial}@media(min-width: 800px){.desktop-nav.svelte-1rsfiza.svelte-1rsfiza{display:flex
 }}.mobile-nav.svelte-1rsfiza.svelte-1rsfiza{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-1rsfiza.svelte-1rsfiza{display:none
 }}#popup.svelte-1rsfiza.svelte-1rsfiza{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-1rsfiza button#close.svelte-1rsfiza{position:absolute;right:1rem;top:1rem}</style>
@@ -88,6 +89,12 @@ section.svelte-117x5w7.svelte-117x5w7{background:var(--color-background, black);
             <a class="button svelte-117x5w7" href="https://maps.app.goo.gl/ccWdqLYojW3KeViD7">Localização
               </a></div>
         </div></div></div></section></div> 
+<div class="section" id="section-1e001d3b"><section class="section-container svelte-o9z257"><div class="card svelte-o9z257"><h2 class="heading svelte-o9z257">Responder ao convite
+</h2>
+    <div class="body svelte-o9z257"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div>
+    <div class="buttons svelte-o9z257"><a class="button svelte-o9z257" href="/rsff">
+        <span>R.S.F.F.</span>
+      </a></div></div></section></div> 
 <div class="section" id="section-8bf3a593"><header class="section-container svelte-1rsfiza"><div class="desktop-nav svelte-1rsfiza"><a href="/" class="logo svelte-1rsfiza">Rita e Cristóvão</a>
     <nav class="svelte-1rsfiza"><a class="link svelte-1rsfiza" href="/">Início</a><a class="link svelte-1rsfiza" href="/rsff">RSFF</a><a class="link svelte-1rsfiza" href="/mais-info">Mais informações</a></nav></div>
   <div class="mobile-nav svelte-1rsfiza"><a href="/" class="logo svelte-1rsfiza">Rita e Cristóvão</a>
@@ -102,6 +109,19 @@ section.svelte-117x5w7.svelte-117x5w7{background:var(--color-background, black);
               target: document.querySelector('#section-8bf3a593'),
               hydrate: true,
               props: {"logo":{"image":{"alt":"","src":"","url":"","size":null},"title":"Rita e Cristóvão"},"site_nav":[{"link":{"label":"Início","url":"/","active":false}},{"link":{"url":"/rsff","label":"RSFF","active":false}},{"link":{"label":"Mais informações","url":"/mais-info","active":false}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/6b999594-b855-4162-ae16-cafb9608fe8a.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-1e001d3b'),
+              hydrate: true,
+              props: {"heading":"Responder ao convite\n","body":{"html":"","markdown":""},"buttons":[{"icon":"","link":{"url":"/rsff","label":"R.S.F.F."}}]}
             })
           
       })
