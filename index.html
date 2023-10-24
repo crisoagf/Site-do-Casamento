@@ -2,7 +2,7 @@
   <html lang="en">
     <head>
       <meta name="generator" content="Primo" />
-      <!-- HEAD_svelte-1d2iu7n_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css");
+      <!-- HEAD_svelte-1pxf4vd_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css");
 
 @font-face {
   font-family: Migra;
@@ -20,9 +20,12 @@ html{
 
 :root{
   --color: #354658;
-  --color-accent: #354658;
+  --color-accent: #eee;
   --background: #eee;
   --color-background: #354658;
+  --border-color: #354658;
+  --secondary-color-background: #cacccf;
+  --max-width: max(80%, 1000px);
 }
 
 #page {
@@ -47,9 +50,14 @@ html{
   margin: 0;
 }
 
+.accent-background {
+  background-color: var(--background);
+}
+
 .button {
-  color: white;
-  background: var(--color-accent);
+  color: var(--color-accent);
+  border-color: var(--color-background);
+  background: var(--color-background);
   border-radius: 5px;
   padding: 8px min(20px, 2vw);
   transition: var(--transition);
@@ -64,46 +72,51 @@ html{
     color: var(--color-accent); 
     border: 2px solid var(--color-accent);
   }
-</style><!-- HEAD_svelte-1d2iu7n_END -->
-      <style>header.svelte-l6zzqy.svelte-l6zzqy{color:var(--color-white, white);position:relative;overflow:hidden;background:var(--color-background)}img.svelte-l6zzqy.svelte-l6zzqy{position:absolute;inset:0em;height:max(100%, 250px);width:100%;-o-object-fit:cover;object-fit:cover}.heading-group.svelte-l6zzqy.svelte-l6zzqy{background:#12121250;display:grid;place-items:center;padding-top:min(40rem,50vw);padding-bottom:min(2rem, 4vw);position:relative;gap:min(1vw,10rem)}.heading-group.svelte-l6zzqy .heading.svelte-l6zzqy{font-size:clamp(1.75rem, 5vw, 10rem);color:var(--color-white, white)}.heading-group.svelte-l6zzqy .subheading.svelte-l6zzqy{place-self:center;font-size:clamp(1.25rem, 3vw, 5rem);line-height:1.3;color:var(--color-inverted)}.buttons.svelte-l6zzqy.svelte-l6zzqy{margin-top:1rem;display:flex;justify-content:center;gap:1rem}.buttons.svelte-l6zzqy .button.svelte-l6zzqy{background:transparent;font-size:clamp(1rem, 2vw, 3rem);color:var(--color-inverted);border:1.5px solid white}.buttons.svelte-l6zzqy .button.disabled.svelte-l6zzqy{display:none;border:1.5px solid lightgrey;color:var(--color-disabled)}
-section.svelte-96e5u0.svelte-96e5u0{background:var(--color-background, black);color:var(--color-white,white)}.teasers.svelte-96e5u0.svelte-96e5u0{display:grid;gap:6rem}.teaser.svelte-96e5u0.svelte-96e5u0{display:grid;gap:1rem}.teaser.svelte-96e5u0 img.svelte-96e5u0{width:min(100%, 60vw);aspect-ratio:5/3;border-radius:var(--border-radius);justify-self:center;-o-object-fit:cover;object-fit:cover}.teaser.svelte-96e5u0 .content-section.svelte-96e5u0{display:grid;place-items:center;padding:0}.teaser.svelte-96e5u0 .content-section .heading.svelte-96e5u0{margin-bottom:1.25rem;margin-left:0;color:var(--color-white, white)}.teaser.svelte-96e5u0 .content-section .body.svelte-96e5u0{margin-bottom:2rem}.teaser.svelte-96e5u0 .content-section a.button.svelte-96e5u0{background-color:transparent;border:1.5px solid white}.teaser.svelte-96e5u0 .content-section a.button.svelte-96e5u0:hover{box-shadow:0 0 0 2px white}@media(min-width: 800px){.teaser.svelte-96e5u0.svelte-96e5u0{grid-template-columns:1fr 1fr;gap:4rem
+</style><!-- HEAD_svelte-1pxf4vd_END -->
+      <style>.section-container.svelte-m632h5.svelte-m632h5{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem;background-color:var(--background)}.logo.svelte-m632h5.svelte-m632h5{font-family:Migra;font-size:1.5rem;font-weight:600;line-height:1.2}.desktop-nav.svelte-m632h5.svelte-m632h5{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-m632h5 nav.svelte-m632h5{display:flex;gap:2rem}.desktop-nav.svelte-m632h5 nav a.link.svelte-m632h5{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-m632h5 nav a.link.svelte-m632h5:hover{border-color:initial}@media(min-width: 800px){.desktop-nav.svelte-m632h5.svelte-m632h5{display:flex
+}}.mobile-nav.svelte-m632h5.svelte-m632h5{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-m632h5.svelte-m632h5{display:none
+}}#popup.svelte-m632h5.svelte-m632h5{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-m632h5 button#close.svelte-m632h5{position:absolute;right:1rem;top:1rem}
+header.svelte-1rohlit.svelte-1rohlit{color:var(--color-accent, white);position:relative;overflow:hidden;background:var(--color-background)}img.svelte-1rohlit.svelte-1rohlit{position:absolute;inset:0em;height:max(250px, 100%);width:100%;-o-object-fit:cover;object-fit:cover}.heading-group.svelte-1rohlit.svelte-1rohlit{background:#12121250;display:grid;place-items:center;padding-top:min(40rem,50vw);padding-bottom:min(2rem, 4vw);position:relative;gap:min(1vw,10rem)}.heading-group.svelte-1rohlit .heading.svelte-1rohlit{font-size:clamp(1.75rem, 5vw, 10rem);color:var(--color-white, white)}.heading-group.svelte-1rohlit .subheading.svelte-1rohlit{place-self:center;font-size:clamp(1.25rem, 3vw, 5rem);line-height:1.3;color:var(--color-inverted)}.buttons.svelte-1rohlit.svelte-1rohlit{margin-top:1rem;display:flex;justify-content:center;gap:1rem}.buttons.svelte-1rohlit .button.svelte-1rohlit{background:transparent;font-size:clamp(1rem, 2vw, 3rem);color:var(--color-inverted);border:1.5px solid white}.buttons.svelte-1rohlit .button.disabled.svelte-1rohlit{display:none;border:1.5px solid lightgrey;color:var(--color-disabled)}
+section.svelte-ebgs94.svelte-ebgs94{background:var(--color-background, black);color:var(--color-accent,white)}.section-container.svelte-ebgs94.svelte-ebgs94{background:var(--color-background, black)}.teasers.svelte-ebgs94.svelte-ebgs94{display:grid;gap:6rem}.teaser.svelte-ebgs94.svelte-ebgs94{display:grid;gap:1rem}.teaser.svelte-ebgs94 img.svelte-ebgs94{width:min(100%, 60vw);aspect-ratio:5/3;border-radius:var(--border-radius);justify-self:center;-o-object-fit:cover;object-fit:cover}.teaser.svelte-ebgs94 .content-section.svelte-ebgs94{display:grid;place-items:center;padding:0}.teaser.svelte-ebgs94 .content-section .heading.svelte-ebgs94{margin-bottom:1.25rem;margin-left:0;color:var(--color-accent, white)}.teaser.svelte-ebgs94 .content-section .body.svelte-ebgs94{margin-bottom:2rem}.teaser.svelte-ebgs94 .content-section a.button.svelte-ebgs94{background-color:transparent;border:1.5px solid var(--color-accent)}.teaser.svelte-ebgs94 .content-section a.button.svelte-ebgs94:hover{box-shadow:0 0 0 2px var(--color-accent)}@media(min-width: 800px){.teaser.svelte-ebgs94.svelte-ebgs94{grid-template-columns:1fr 1fr;gap:4rem
 
     /* switch direction for even items */
-}.teaser.svelte-96e5u0 .content-section.svelte-96e5u0{place-items:flex-start}.teaser.svelte-96e5u0:nth-child(odd) img.svelte-96e5u0{grid-row:1;grid-column:2}.teaser.svelte-96e5u0:nth-child(even) img.svelte-96e5u0{grid-row:1;grid-column:1}}.further_nav.svelte-96e5u0.svelte-96e5u0{display:flex;margin:2rem;place-content:center}.further_nav.svelte-96e5u0 a.button.svelte-96e5u0{font-size:1.5rem;background-color:transparent;border:1.5px solid white}.further_nav.svelte-96e5u0 a.button.svelte-96e5u0:hover{box-shadow:0 0 0 2px white}@media(min-width: 1200px){section.svelte-96e5u0.svelte-96e5u0{gap:6rem}.teaser.svelte-96e5u0.svelte-96e5u0{gap:10rem}.heading.svelte-96e5u0.svelte-96e5u0{margin-bottom:5rem}.body.svelte-96e5u0.svelte-96e5u0{margin-bottom:2.5rem}.further_nav.svelte-96e5u0.svelte-96e5u0{gap:10rem}}
-.section-container.svelte-o9z257.svelte-o9z257{display:grid;justify-content:center}.card.svelte-o9z257.svelte-o9z257{padding:4rem clamp(2rem, 10vw, 7rem);border:1px solid var(--border-color, #eee);border-radius:var(--border-radius);text-align:center;display:grid}.heading.svelte-o9z257.svelte-o9z257{margin-bottom:1.5rem}.body.svelte-o9z257.svelte-o9z257{max-width:700px;margin-bottom:2.25rem}.buttons.svelte-o9z257.svelte-o9z257{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}.buttons.svelte-o9z257 .button.svelte-o9z257{display:flex;align-items:center;gap:0.25rem}
-.section-container.svelte-1rsfiza.svelte-1rsfiza{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}.logo.svelte-1rsfiza.svelte-1rsfiza{font-family:Migra;font-size:1.5rem;font-weight:600;line-height:1.2}.desktop-nav.svelte-1rsfiza.svelte-1rsfiza{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-1rsfiza nav.svelte-1rsfiza{display:flex;gap:2rem}.desktop-nav.svelte-1rsfiza nav a.link.svelte-1rsfiza{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-1rsfiza nav a.link.svelte-1rsfiza:hover{border-color:initial}@media(min-width: 800px){.desktop-nav.svelte-1rsfiza.svelte-1rsfiza{display:flex
-}}.mobile-nav.svelte-1rsfiza.svelte-1rsfiza{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-1rsfiza.svelte-1rsfiza{display:none
-}}#popup.svelte-1rsfiza.svelte-1rsfiza{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-1rsfiza button#close.svelte-1rsfiza{position:absolute;right:1rem;top:1rem}</style>
+}.teaser.svelte-ebgs94 .content-section.svelte-ebgs94{place-items:flex-start}.teaser.svelte-ebgs94:nth-child(odd) img.svelte-ebgs94{grid-row:1;grid-column:2}.teaser.svelte-ebgs94:nth-child(even) img.svelte-ebgs94{grid-row:1;grid-column:1}}.further_nav.svelte-ebgs94.svelte-ebgs94{display:flex;margin:2rem;place-content:center}.further_nav.svelte-ebgs94 a.button.svelte-ebgs94{font-size:1.5rem;background-color:transparent;border:1.5px solid var(--color-accent)}.further_nav.svelte-ebgs94 a.button.svelte-ebgs94:hover{box-shadow:0 0 0 2px var(--color-accent)}@media(min-width: 1200px){section.svelte-ebgs94.svelte-ebgs94{gap:6rem}.teaser.svelte-ebgs94.svelte-ebgs94{gap:10rem}.heading.svelte-ebgs94.svelte-ebgs94{margin-bottom:5rem}.body.svelte-ebgs94.svelte-ebgs94{margin-bottom:2.5rem}.further_nav.svelte-ebgs94.svelte-ebgs94{gap:10rem}}
+.section-container.svelte-118qdms.svelte-118qdms{background-color:var(--background);display:grid;justify-content:center}.card.svelte-118qdms.svelte-118qdms{padding:4rem clamp(2rem, 10vw, 7rem);border:1px solid var(--border-color, #eee);border-radius:var(--border-radius);text-align:center;display:grid}.heading.svelte-118qdms.svelte-118qdms{margin-bottom:1.5rem}.body.svelte-118qdms.svelte-118qdms{max-width:700px;margin-bottom:2.25rem}.buttons.svelte-118qdms.svelte-118qdms{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}.buttons.svelte-118qdms .button.svelte-118qdms{display:flex;align-items:center;gap:0.25rem}
+.section-container.svelte-gg6ehh.svelte-gg6ehh{display:flex;justify-content:space-between;flex-direction:column;align-items:center;gap:1rem;padding-top:1rem;padding-bottom:1rem}@media(min-width: 600px){.section-container.svelte-gg6ehh.svelte-gg6ehh{flex-direction:row
+}}nav.svelte-gg6ehh.svelte-gg6ehh{display:flex;gap:1rem;font-size:.875rem}nav.svelte-gg6ehh .link.svelte-gg6ehh{border-color:transparent}nav.svelte-gg6ehh .link.svelte-gg6ehh:hover{border-color:initial}.primo.svelte-gg6ehh.svelte-gg6ehh{font-weight:600;font-size:0.75rem}.primo.svelte-gg6ehh a.svelte-gg6ehh{text-decoration:underline}.social-links.svelte-gg6ehh.svelte-gg6ehh{display:none;gap:1.5rem;font-size:1.5rem}.social-links.svelte-gg6ehh a.svelte-gg6ehh{color:var(--color-accent, rebeccapurple);transition:var(--transition, 0.1s transform)}.social-links.svelte-gg6ehh a.svelte-gg6ehh:hover{transform:scale(1.1)}</style>
     </head>
     <body id="page">
        
-<div class="section" id="section-28188a07"><header class="svelte-l6zzqy"><img src="https://mwobacdzcczmcevupefl.supabase.co/storage/v1/object/public/images/Banner5.png" alt="A Rita e o Cristóvão" class="svelte-l6zzqy">
-  <div class="heading-group heading-group-large svelte-l6zzqy"><h1 class="heading svelte-l6zzqy">Rita e Cristóvão</h1>
-    <span class="subheading svelte-l6zzqy">10 de Fevereiro de 2024</span>
-    <div class="buttons svelte-l6zzqy"></div></div></header></div> 
-<div class="section" id="section-05643d9c"><section class="svelte-96e5u0"><div class="section-container svelte-96e5u0" id="informacoes"><div class="teasers svelte-96e5u0"><div class="teaser svelte-96e5u0"><img src="https://paroquiasaonicolau.pt/wp-content/uploads/2020/09/Sao-Nicola.jpeg" alt="Igreja de S. Nicolau" class="svelte-96e5u0">
-          <div class="content-section svelte-96e5u0"><h2 class="heading svelte-96e5u0">Missa</h2>
-            <div class="body svelte-96e5u0"><!-- HTML_TAG_START --><p>11:30 - Igreja de S. Nicolau, Lisboa</p><!-- HTML_TAG_END --></div>
-            <a class="button svelte-96e5u0" href="https://maps.app.goo.gl/KdQnCNJQJxf5taQr5">Localização
+<div class="section" id="section-8bf3a593"><div class="accent-background"><header class="section-container svelte-m632h5"><div class="desktop-nav svelte-m632h5"><a href="/" class="logo svelte-m632h5">Rita e Cristóvão</a>
+    <nav class="svelte-m632h5"><a class="link svelte-m632h5" href="/">Início</a><a class="link svelte-m632h5" href="/rsff">R.S.F.F.</a><a class="link svelte-m632h5" href="/mais-info">Mais informações</a></nav></div>
+  <div class="mobile-nav svelte-m632h5"><a href="/" class="logo svelte-m632h5">Rita e Cristóvão</a>
+    <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START --><g id="iconifySvelte0"><g id="iconifySvelte1"><g id="iconifySvelte2" fill="currentColor"><rect width="18" height="2" x="3" y="11" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="16" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="6" rx=".95" ry=".95"/></g></g></g><!-- HTML_TAG_END --></svg></button>
+    </div></header></div></div> 
+<div class="section" id="section-28188a07"><div><header class="svelte-1rohlit"><img src="https://mwobacdzcczmcevupefl.supabase.co/storage/v1/object/public/images/Banner5.png" alt="A Rita e o Cristóvão" class="svelte-1rohlit">
+  <div class="heading-group heading-group-large svelte-1rohlit"><h1 class="heading svelte-1rohlit">Rita e Cristóvão</h1>
+    <span class="subheading svelte-1rohlit">10 de Fevereiro de 2024</span>
+    <div class="buttons svelte-1rohlit"></div></div></header></div></div> 
+<div class="section" id="section-05643d9c"><section class="svelte-ebgs94"><div class="section-container svelte-ebgs94" id="informacoes"><div class="teasers svelte-ebgs94"><div class="teaser svelte-ebgs94"><img src="https://paroquiasaonicolau.pt/wp-content/uploads/2020/09/Sao-Nicola.jpeg" alt="Igreja de S. Nicolau" class="svelte-ebgs94">
+          <div class="content-section svelte-ebgs94"><h2 class="heading svelte-ebgs94">Missa</h2>
+            <div class="body svelte-ebgs94"><!-- HTML_TAG_START --><p>11:30 - Igreja de S. Nicolau, Lisboa</p><!-- HTML_TAG_END --></div>
+            <a class="button svelte-ebgs94" href="https://maps.app.goo.gl/KdQnCNJQJxf5taQr5">Localização
               </a></div>
-        </div><div class="teaser svelte-96e5u0"><img src="https://mwobacdzcczmcevupefl.supabase.co/storage/v1/object/public/images/QuintaValeRiacho.jpg" alt="" class="svelte-96e5u0">
-          <div class="content-section svelte-96e5u0"><h2 class="heading svelte-96e5u0">Copo d'água</h2>
-            <div class="body svelte-96e5u0"><!-- HTML_TAG_START --><p>Quinta do Valle de Riacho, Alenquer</p><!-- HTML_TAG_END --></div>
-            <a class="button svelte-96e5u0" href="https://maps.app.goo.gl/ccWdqLYojW3KeViD7">Localização
+        </div><div class="teaser svelte-ebgs94"><img src="https://mwobacdzcczmcevupefl.supabase.co/storage/v1/object/public/images/QuintaValeRiacho.jpg" alt="" class="svelte-ebgs94">
+          <div class="content-section svelte-ebgs94"><h2 class="heading svelte-ebgs94">Copo d'água</h2>
+            <div class="body svelte-ebgs94"><!-- HTML_TAG_START --><p>Quinta do Valle de Riacho, Alenquer</p><!-- HTML_TAG_END --></div>
+            <a class="button svelte-ebgs94" href="https://maps.app.goo.gl/ccWdqLYojW3KeViD7">Localização
               </a></div>
         </div></div>
     </div></section></div> 
-<div class="section" id="section-1e001d3b"><section class="section-container svelte-o9z257"><div class="card svelte-o9z257"><h2 class="heading svelte-o9z257">Responder ao convite
+<div class="section" id="section-1e001d3b"><section class="accent-background"><div class="section-container svelte-118qdms"><div class="card svelte-118qdms"><h2 class="heading svelte-118qdms">Responder ao convite
 </h2>
-    <div class="body svelte-o9z257"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div>
-    <div class="buttons svelte-o9z257"><a class="button svelte-o9z257" href="/rsff">
+    <div class="body svelte-118qdms"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div>
+    <div class="buttons svelte-118qdms"><a class="button svelte-118qdms" href="/rsff">
         <span>R.S.F.F.</span>
-      </a></div></div></section></div> 
-<div class="section" id="section-8bf3a593"><header class="section-container svelte-1rsfiza"><div class="desktop-nav svelte-1rsfiza"><a href="/" class="logo svelte-1rsfiza">Rita e Cristóvão</a>
-    <nav class="svelte-1rsfiza"><a class="link svelte-1rsfiza" href="/">Início</a><a class="link svelte-1rsfiza" href="/rsff">R.S.F.F.</a><a class="link svelte-1rsfiza" href="/mais-info">Mais informações</a></nav></div>
-  <div class="mobile-nav svelte-1rsfiza"><a href="/" class="logo svelte-1rsfiza">Rita e Cristóvão</a>
-    <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START --><g id="iconifySvelte0"><g id="iconifySvelte1"><g id="iconifySvelte2" fill="currentColor"><rect width="18" height="2" x="3" y="11" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="16" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="6" rx=".95" ry=".95"/></g></g></g><!-- HTML_TAG_END --></svg></button>
-    </div></header></div> 
+      </a></div></div></div></section></div> 
+<div class="section" id="section-c54f4da0"><footer class="section-container svelte-gg6ehh"><nav class="svelte-gg6ehh"><a class="link svelte-gg6ehh" href="/">Início</a><a class="link svelte-gg6ehh" href="/rsff">R.S.F.F.</a><a class="link svelte-gg6ehh" href="/mais-info">Mais informações</a></nav>
+  <span class="primo svelte-gg6ehh"><a href="https://primo.so" class="svelte-gg6ehh">Primo</a> Powered </span>
+  <div class="social-links svelte-gg6ehh"></div></footer></div> 
 
       <script type="module">
       import('/_symbols/7123dca8-d8fc-4576-8e54-a93e9915b953.js')
@@ -113,6 +126,19 @@ section.svelte-96e5u0.svelte-96e5u0{background:var(--color-background, black);co
               target: document.querySelector('#section-8bf3a593'),
               hydrate: true,
               props: {"logo":{"image":{"alt":"","src":"","url":"","size":null},"title":"Rita e Cristóvão"},"site_nav":[{"link":{"url":"/","label":"Início","active":false}},{"link":{"url":"/rsff","label":"R.S.F.F.","active":false}},{"link":{"url":"/mais-info","label":"Mais informações","active":false}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/b3756f47-f0d6-4289-ad86-6684a0e6b436.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-c54f4da0'),
+              hydrate: true,
+              props: {"nav":[{"link":{"label":"Início","url":"/","active":false}},{"link":{"label":"R.S.F.F.","url":"/rsff","active":false}},{"link":{"label":"Mais informações","url":"/mais-info","active":false}}],"social":[]}
             })
           
       })

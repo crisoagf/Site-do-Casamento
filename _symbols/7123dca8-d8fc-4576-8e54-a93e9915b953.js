@@ -1,4 +1,4 @@
-// Site Navigation - Updated October 23, 2023
+// Site Navigation - Updated October 24, 2023
 function noop() { }
 const identity = x => x;
 function assign(tar, src) {
@@ -3048,7 +3048,7 @@ function get_each_context_1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (102:31) 
+// (104:31) 
 function create_if_block_4(ctx) {
 	let img;
 	let img_src_value;
@@ -3085,7 +3085,7 @@ function create_if_block_4(ctx) {
 	};
 }
 
-// (100:6) {#if logo.title}
+// (102:6) {#if logo.title}
 function create_if_block_3(ctx) {
 	let t_value = /*logo*/ ctx[0].title + "";
 	let t;
@@ -3109,7 +3109,7 @@ function create_if_block_3(ctx) {
 	};
 }
 
-// (107:6) {#each site_nav as { link }}
+// (109:6) {#each site_nav as { link }}
 function create_each_block_1(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[7].label + "";
@@ -3130,7 +3130,7 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "link svelte-1rsfiza");
+			attr(a, "class", "link svelte-m632h5");
 			attr(a, "href", a_href_value = /*link*/ ctx[7].url);
 		},
 		m(target, anchor) {
@@ -3150,7 +3150,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (116:31) 
+// (118:31) 
 function create_if_block_2(ctx) {
 	let img;
 	let img_src_value;
@@ -3187,7 +3187,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (114:6) {#if logo.title}
+// (116:6) {#if logo.title}
 function create_if_block_1(ctx) {
 	let t_value = /*logo*/ ctx[0].title + "";
 	let t;
@@ -3211,7 +3211,7 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (126:4) {#if mobileNavOpen}
+// (128:4) {#if mobileNavOpen}
 function create_if_block(ctx) {
 	let nav;
 	let t;
@@ -3268,9 +3268,9 @@ function create_if_block(ctx) {
 		h() {
 			attr(button, "id", "close");
 			attr(button, "aria-label", "Close Navigation");
-			attr(button, "class", "svelte-1rsfiza");
+			attr(button, "class", "svelte-m632h5");
 			attr(nav, "id", "popup");
-			attr(nav, "class", "svelte-1rsfiza");
+			attr(nav, "class", "svelte-m632h5");
 		},
 		m(target, anchor) {
 			insert_hydration(target, nav, anchor);
@@ -3344,7 +3344,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (128:8) {#each site_nav as { link }}
+// (130:8) {#each site_nav as { link }}
 function create_each_block(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[7].label + "";
@@ -3385,6 +3385,7 @@ function create_each_block(ctx) {
 }
 
 function create_fragment(ctx) {
+	let div2;
 	let header;
 	let div0;
 	let a0;
@@ -3431,6 +3432,7 @@ function create_fragment(ctx) {
 
 	return {
 		c() {
+			div2 = element("div");
 			header = element("header");
 			div0 = element("div");
 			a0 = element("a");
@@ -3454,7 +3456,9 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		l(nodes) {
-			header = claim_element(nodes, "HEADER", { class: true });
+			div2 = claim_element(nodes, "DIV", { class: true });
+			var div2_nodes = children(div2);
+			header = claim_element(div2_nodes, "HEADER", { class: true });
 			var header_nodes = children(header);
 			div0 = claim_element(header_nodes, "DIV", { class: true });
 			var div0_nodes = children(div0);
@@ -3488,22 +3492,25 @@ function create_fragment(ctx) {
 			if (if_block2) if_block2.l(div1_nodes);
 			div1_nodes.forEach(detach);
 			header_nodes.forEach(detach);
+			div2_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
 			attr(a0, "href", "/");
-			attr(a0, "class", "logo svelte-1rsfiza");
-			attr(nav, "class", "svelte-1rsfiza");
-			attr(div0, "class", "desktop-nav svelte-1rsfiza");
+			attr(a0, "class", "logo svelte-m632h5");
+			attr(nav, "class", "svelte-m632h5");
+			attr(div0, "class", "desktop-nav svelte-m632h5");
 			attr(a1, "href", "/");
-			attr(a1, "class", "logo svelte-1rsfiza");
+			attr(a1, "class", "logo svelte-m632h5");
 			attr(button, "id", "open");
 			attr(button, "aria-label", "Open mobile navigation");
-			attr(div1, "class", "mobile-nav svelte-1rsfiza");
-			attr(header, "class", "section-container svelte-1rsfiza");
+			attr(div1, "class", "mobile-nav svelte-m632h5");
+			attr(header, "class", "section-container svelte-m632h5");
+			attr(div2, "class", "accent-background");
 		},
 		m(target, anchor) {
-			insert_hydration(target, header, anchor);
+			insert_hydration(target, div2, anchor);
+			append_hydration(div2, header);
 			append_hydration(header, div0);
 			append_hydration(div0, a0);
 			if (if_block0) if_block0.m(a0, null);
@@ -3615,7 +3622,7 @@ function create_fragment(ctx) {
 			current = false;
 		},
 		d(detaching) {
-			if (detaching) detach(header);
+			if (detaching) detach(div2);
 
 			if (if_block0) {
 				if_block0.d();

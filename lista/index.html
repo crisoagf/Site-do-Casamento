@@ -2,7 +2,7 @@
   <html lang="en">
     <head>
       <meta name="generator" content="Primo" />
-      <!-- HEAD_svelte-1d2iu7n_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css");
+      <!-- HEAD_svelte-1pxf4vd_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css");
 
 @font-face {
   font-family: Migra;
@@ -20,9 +20,12 @@ html{
 
 :root{
   --color: #354658;
-  --color-accent: #354658;
+  --color-accent: #eee;
   --background: #eee;
   --color-background: #354658;
+  --border-color: #354658;
+  --secondary-color-background: #cacccf;
+  --max-width: max(80%, 1000px);
 }
 
 #page {
@@ -47,9 +50,14 @@ html{
   margin: 0;
 }
 
+.accent-background {
+  background-color: var(--background);
+}
+
 .button {
-  color: white;
-  background: var(--color-accent);
+  color: var(--color-accent);
+  border-color: var(--color-background);
+  background: var(--color-background);
   border-radius: 5px;
   padding: 8px min(20px, 2vw);
   transition: var(--transition);
@@ -64,26 +72,26 @@ html{
     color: var(--color-accent); 
     border: 2px solid var(--color-accent);
   }
-</style><!-- HEAD_svelte-1d2iu7n_END -->
-      <style>.section-container.svelte-1rsfiza.svelte-1rsfiza{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}.logo.svelte-1rsfiza.svelte-1rsfiza{font-family:Migra;font-size:1.5rem;font-weight:600;line-height:1.2}.desktop-nav.svelte-1rsfiza.svelte-1rsfiza{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-1rsfiza nav.svelte-1rsfiza{display:flex;gap:2rem}.desktop-nav.svelte-1rsfiza nav a.link.svelte-1rsfiza{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-1rsfiza nav a.link.svelte-1rsfiza:hover{border-color:initial}@media(min-width: 800px){.desktop-nav.svelte-1rsfiza.svelte-1rsfiza{display:flex
-}}.mobile-nav.svelte-1rsfiza.svelte-1rsfiza{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-1rsfiza.svelte-1rsfiza{display:none
-}}#popup.svelte-1rsfiza.svelte-1rsfiza{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-1rsfiza button#close.svelte-1rsfiza{position:absolute;right:1rem;top:1rem}
-.section-container.svelte-o9z257.svelte-o9z257{display:grid;justify-content:center}.card.svelte-o9z257.svelte-o9z257{padding:4rem clamp(2rem, 10vw, 7rem);border:1px solid var(--border-color, #eee);border-radius:var(--border-radius);text-align:center;display:grid}.heading.svelte-o9z257.svelte-o9z257{margin-bottom:1.5rem}.body.svelte-o9z257.svelte-o9z257{max-width:700px;margin-bottom:2.25rem}.buttons.svelte-o9z257.svelte-o9z257{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}.buttons.svelte-o9z257 .button.svelte-o9z257{display:flex;align-items:center;gap:0.25rem}
+</style><!-- HEAD_svelte-1pxf4vd_END -->
+      <style>.section-container.svelte-m632h5.svelte-m632h5{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem;background-color:var(--background)}.logo.svelte-m632h5.svelte-m632h5{font-family:Migra;font-size:1.5rem;font-weight:600;line-height:1.2}.desktop-nav.svelte-m632h5.svelte-m632h5{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-m632h5 nav.svelte-m632h5{display:flex;gap:2rem}.desktop-nav.svelte-m632h5 nav a.link.svelte-m632h5{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-m632h5 nav a.link.svelte-m632h5:hover{border-color:initial}@media(min-width: 800px){.desktop-nav.svelte-m632h5.svelte-m632h5{display:flex
+}}.mobile-nav.svelte-m632h5.svelte-m632h5{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-m632h5.svelte-m632h5{display:none
+}}#popup.svelte-m632h5.svelte-m632h5{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-m632h5 button#close.svelte-m632h5{position:absolute;right:1rem;top:1rem}
+.section-container.svelte-118qdms.svelte-118qdms{background-color:var(--background);display:grid;justify-content:center}.card.svelte-118qdms.svelte-118qdms{padding:4rem clamp(2rem, 10vw, 7rem);border:1px solid var(--border-color, #eee);border-radius:var(--border-radius);text-align:center;display:grid}.heading.svelte-118qdms.svelte-118qdms{margin-bottom:1.5rem}.body.svelte-118qdms.svelte-118qdms{max-width:700px;margin-bottom:2.25rem}.buttons.svelte-118qdms.svelte-118qdms{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}.buttons.svelte-118qdms .button.svelte-118qdms{display:flex;align-items:center;gap:0.25rem}
 .section-container.svelte-1352h1w.svelte-1352h1w{max-width:var(--inner-max-width, 900px)}h2.svelte-1352h1w.svelte-1352h1w{color:var(--color-heading);font-size:1rem;line-height:1.1;font-weight:600;margin-bottom:4rem;letter-spacing:-0.02rem;padding:.5rem 0;border-bottom:1px solid #f0f0f0}ul.items.svelte-1352h1w.svelte-1352h1w{display:grid;gap:4rem}li.svelte-1352h1w.svelte-1352h1w{display:grid;gap:2rem}li.svelte-1352h1w .post-info .title.svelte-1352h1w{color:var(--color-heading);display:block;font-size:1.3rem;font-weight:600;margin-bottom:0.75rem;line-height:1.2;letter-spacing:-0.02rem;-webkit-text-decoration:underline transparent;text-decoration:underline transparent;transition:0.1s -webkit-text-decoration;transition:0.1s text-decoration;transition:0.1s text-decoration, 0.1s -webkit-text-decoration}li.svelte-1352h1w .post-info .title.svelte-1352h1w:hover{-webkit-text-decoration-color:initial;text-decoration-color:initial}li.svelte-1352h1w .post-info .description.svelte-1352h1w{font-size:1rem;margin-bottom:0.5rem;color:#2d3339}li.svelte-1352h1w .post-info .date.svelte-1352h1w{font-size:1rem;font-weight:400;color:var(--color-accent2);font-weight:400}li.svelte-1352h1w img.svelte-1352h1w{box-shadow:var(--box-shadow);border-radius:var(--border-radius)}@media(min-width: 600px){li.svelte-1352h1w.svelte-1352h1w{grid-template-columns:3fr 1fr;gap:3rem}}
-.section-container.svelte-i9k4w2.svelte-i9k4w2{display:flex;justify-content:space-between;flex-direction:column;align-items:center;gap:1rem;padding-top:1rem;padding-bottom:1rem}@media(min-width: 600px){.section-container.svelte-i9k4w2.svelte-i9k4w2{flex-direction:row
-}}nav.svelte-i9k4w2.svelte-i9k4w2{display:flex;gap:1rem;font-size:.875rem}nav.svelte-i9k4w2 .link.svelte-i9k4w2{border-color:transparent}nav.svelte-i9k4w2 .link.svelte-i9k4w2:hover{border-color:initial}.primo.svelte-i9k4w2.svelte-i9k4w2{font-weight:600;font-size:0.75rem}.primo.svelte-i9k4w2 a.svelte-i9k4w2{text-decoration:underline}.social-links.svelte-i9k4w2.svelte-i9k4w2{display:flex;gap:1.5rem;font-size:1.5rem}.social-links.svelte-i9k4w2 a.svelte-i9k4w2{color:var(--color-accent, rebeccapurple);transition:var(--transition, 0.1s transform)}.social-links.svelte-i9k4w2 a.svelte-i9k4w2:hover{transform:scale(1.1)}</style>
+.section-container.svelte-gg6ehh.svelte-gg6ehh{display:flex;justify-content:space-between;flex-direction:column;align-items:center;gap:1rem;padding-top:1rem;padding-bottom:1rem}@media(min-width: 600px){.section-container.svelte-gg6ehh.svelte-gg6ehh{flex-direction:row
+}}nav.svelte-gg6ehh.svelte-gg6ehh{display:flex;gap:1rem;font-size:.875rem}nav.svelte-gg6ehh .link.svelte-gg6ehh{border-color:transparent}nav.svelte-gg6ehh .link.svelte-gg6ehh:hover{border-color:initial}.primo.svelte-gg6ehh.svelte-gg6ehh{font-weight:600;font-size:0.75rem}.primo.svelte-gg6ehh a.svelte-gg6ehh{text-decoration:underline}.social-links.svelte-gg6ehh.svelte-gg6ehh{display:none;gap:1.5rem;font-size:1.5rem}.social-links.svelte-gg6ehh a.svelte-gg6ehh{color:var(--color-accent, rebeccapurple);transition:var(--transition, 0.1s transform)}.social-links.svelte-gg6ehh a.svelte-gg6ehh:hover{transform:scale(1.1)}</style>
     </head>
     <body id="page">
        
-<div class="section" id="section-c1b55103"><header class="section-container svelte-1rsfiza"><div class="desktop-nav svelte-1rsfiza"><a href="/" class="logo svelte-1rsfiza">Rita e Cristóvão</a>
-    <nav class="svelte-1rsfiza"><a class="link svelte-1rsfiza" href="/">Início</a><a class="link svelte-1rsfiza" href="/rsff">R.S.F.F.</a><a class="link svelte-1rsfiza" href="/mais-info">Mais informações</a></nav></div>
-  <div class="mobile-nav svelte-1rsfiza"><a href="/" class="logo svelte-1rsfiza">Rita e Cristóvão</a>
+<div class="section" id="section-c1b55103"><div class="accent-background"><header class="section-container svelte-m632h5"><div class="desktop-nav svelte-m632h5"><a href="/" class="logo svelte-m632h5">Rita e Cristóvão</a>
+    <nav class="svelte-m632h5"><a class="link svelte-m632h5" href="/">Início</a><a class="link svelte-m632h5" href="/rsff">R.S.F.F.</a><a class="link svelte-m632h5" href="/mais-info">Mais informações</a></nav></div>
+  <div class="mobile-nav svelte-m632h5"><a href="/" class="logo svelte-m632h5">Rita e Cristóvão</a>
     <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START --><g id="iconifySvelte0"><g id="iconifySvelte1"><g id="iconifySvelte2" fill="currentColor"><rect width="18" height="2" x="3" y="11" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="16" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="6" rx=".95" ry=".95"/></g></g></g><!-- HTML_TAG_END --></svg></button>
-    </div></header></div> 
-<div class="section" id="section-0567d002"><section class="section-container svelte-o9z257"><div class="card svelte-o9z257"><h2 class="heading svelte-o9z257">Lista de Casamento
+    </div></header></div></div> 
+<div class="section" id="section-0567d002"><section class="accent-background"><div class="section-container svelte-118qdms"><div class="card svelte-118qdms"><h2 class="heading svelte-118qdms">Lista de Casamento
 </h2>
-    <div class="body svelte-o9z257"><!-- HTML_TAG_START --><p>Em baixo estão algumas coisas que vamos precisar para começar a nossa nova vida a dois.</p><p>Obrigado por quererem participar neste momento tão bonito!</p><p></p><p>Sofá</p><p>Cadeiras</p><p>Piano</p><p>Estantes</p><p>Pratos e talheres</p><p>Copos</p><p>Candeeiro</p><p>Mesa IKEA (Standing desk)</p><p></p><!-- HTML_TAG_END --></div>
-    <div class="buttons svelte-o9z257"></div></div></section></div> 
+    <div class="body svelte-118qdms"><!-- HTML_TAG_START --><p>Em baixo estão algumas coisas que vamos precisar para começar a nossa nova vida a dois.</p><p>Obrigado por quererem participar neste momento tão bonito!</p><p></p><p>Sofá</p><p>Cadeiras</p><p>Piano</p><p>Estantes</p><p>Pratos e talheres</p><p>Copos</p><p>Candeeiro</p><p>Mesa IKEA (Standing desk)</p><p></p><!-- HTML_TAG_END --></div>
+    <div class="buttons svelte-118qdms"></div></div></div></section></div> 
 <div class="section" id="section-c815ef1f"><section class="section-container svelte-1352h1w"><h2 class="svelte-1352h1w">
 </h2>
   <ul class="items svelte-1352h1w"><li class="svelte-1352h1w"><div class="post-info"><a class="title svelte-1352h1w" href="/blog-entry">Mastering the art of responsive design: a comprehensive guide</a>
@@ -103,9 +111,9 @@ html{
           <span class="date svelte-1352h1w">December 12, 2023</span></div>
         <img data-key="items[3].thumbnail" src="https://images.unsplash.com/photo-1682795176020-1752b4446818?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2313&amp;q=80" alt="" class="svelte-1352h1w">
       </li></ul></section></div> 
-<div class="section" id="section-0c5bc7a3"><footer class="section-container svelte-i9k4w2"><nav class="svelte-i9k4w2"></nav>
-  <span class="primo svelte-i9k4w2"><a href="https://primo.so" class="svelte-i9k4w2">Primo</a> Powered </span>
-  <div class="social-links svelte-i9k4w2"></div></footer></div> 
+<div class="section" id="section-0c5bc7a3"><footer class="section-container svelte-gg6ehh"><nav class="svelte-gg6ehh"><a class="link svelte-gg6ehh" href="/">Início</a><a class="link svelte-gg6ehh" href="/rsff">R.S.F.F.</a><a class="link svelte-gg6ehh" href="/mais-info">Mais informações</a></nav>
+  <span class="primo svelte-gg6ehh"><a href="https://primo.so" class="svelte-gg6ehh">Primo</a> Powered </span>
+  <div class="social-links svelte-gg6ehh"></div></footer></div> 
 
       <script type="module">
       import('/_symbols/7123dca8-d8fc-4576-8e54-a93e9915b953.js')
@@ -127,7 +135,7 @@ html{
             new App({
               target: document.querySelector('#section-0c5bc7a3'),
               hydrate: true,
-              props: {"nav":[],"social":[]}
+              props: {"nav":[{"link":{"label":"Início","url":"/","active":false}},{"link":{"label":"R.S.F.F.","url":"/rsff","active":false}},{"link":{"label":"Mais informações","url":"/mais-info","active":false}}],"social":[]}
             })
           
       })

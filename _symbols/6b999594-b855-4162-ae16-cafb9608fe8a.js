@@ -1,4 +1,4 @@
-// Box - Updated October 23, 2023
+// Box - Updated October 24, 2023
 function noop() { }
 function assign(tar, src) {
     // @ts-ignore
@@ -2777,7 +2777,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (48:6) {#each buttons as button}
+// (50:6) {#each buttons as button}
 function create_each_block(ctx) {
 	let a;
 	let icon;
@@ -2814,7 +2814,7 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "button svelte-o9z257");
+			attr(a, "class", "button svelte-118qdms");
 			attr(a, "href", a_href_value = /*button*/ ctx[4].link.url);
 		},
 		m(target, anchor) {
@@ -2854,6 +2854,7 @@ function create_each_block(ctx) {
 
 function create_fragment(ctx) {
 	let section;
+	let div3;
 	let div2;
 	let h2;
 	let t0;
@@ -2877,6 +2878,7 @@ function create_fragment(ctx) {
 	return {
 		c() {
 			section = element("section");
+			div3 = element("div");
 			div2 = element("div");
 			h2 = element("h2");
 			t0 = text(/*heading*/ ctx[2]);
@@ -2894,7 +2896,9 @@ function create_fragment(ctx) {
 		l(nodes) {
 			section = claim_element(nodes, "SECTION", { class: true });
 			var section_nodes = children(section);
-			div2 = claim_element(section_nodes, "DIV", { class: true });
+			div3 = claim_element(section_nodes, "DIV", { class: true });
+			var div3_nodes = children(div3);
+			div2 = claim_element(div3_nodes, "DIV", { class: true });
 			var div2_nodes = children(div2);
 			h2 = claim_element(div2_nodes, "H2", { class: true });
 			var h2_nodes = children(h2);
@@ -2914,19 +2918,22 @@ function create_fragment(ctx) {
 
 			div1_nodes.forEach(detach);
 			div2_nodes.forEach(detach);
+			div3_nodes.forEach(detach);
 			section_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(h2, "class", "heading svelte-o9z257");
-			attr(div0, "class", "body svelte-o9z257");
-			attr(div1, "class", "buttons svelte-o9z257");
-			attr(div2, "class", "card svelte-o9z257");
-			attr(section, "class", "section-container svelte-o9z257");
+			attr(h2, "class", "heading svelte-118qdms");
+			attr(div0, "class", "body svelte-118qdms");
+			attr(div1, "class", "buttons svelte-118qdms");
+			attr(div2, "class", "card svelte-118qdms");
+			attr(div3, "class", "section-container svelte-118qdms");
+			attr(section, "class", "accent-background");
 		},
 		m(target, anchor) {
 			insert_hydration(target, section, anchor);
-			append_hydration(section, div2);
+			append_hydration(section, div3);
+			append_hydration(div3, div2);
 			append_hydration(div2, h2);
 			append_hydration(h2, t0);
 			append_hydration(div2, t1);

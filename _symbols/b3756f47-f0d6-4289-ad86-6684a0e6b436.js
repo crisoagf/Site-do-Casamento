@@ -1,4 +1,4 @@
-// Site Footer - Updated October 23, 2023
+// Site Footer - Updated October 24, 2023
 function noop() { }
 function assign(tar, src) {
     // @ts-ignore
@@ -2805,7 +2805,7 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "link svelte-i9k4w2");
+			attr(a, "class", "link svelte-gg6ehh");
 			attr(a, "href", a_href_value = /*link*/ ctx[3].url);
 		},
 		m(target, anchor) {
@@ -2858,7 +2858,7 @@ function create_each_block(ctx) {
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[3].url);
 			attr(a, "aria-label", a_aria_label_value = /*link*/ ctx[3].label);
-			attr(a, "class", "svelte-i9k4w2");
+			attr(a, "class", "svelte-gg6ehh");
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
@@ -2980,12 +2980,12 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		h() {
-			attr(nav_1, "class", "svelte-i9k4w2");
+			attr(nav_1, "class", "svelte-gg6ehh");
 			attr(a, "href", "https://primo.so");
-			attr(a, "class", "svelte-i9k4w2");
-			attr(span, "class", "primo svelte-i9k4w2");
-			attr(div, "class", "social-links svelte-i9k4w2");
-			attr(footer, "class", "section-container svelte-i9k4w2");
+			attr(a, "class", "svelte-gg6ehh");
+			attr(span, "class", "primo svelte-gg6ehh");
+			attr(div, "class", "social-links svelte-gg6ehh");
+			attr(footer, "class", "section-container svelte-gg6ehh");
 		},
 		m(target, anchor) {
 			insert_hydration(target, footer, anchor);
