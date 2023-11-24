@@ -1,0 +1,140 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="generator" content="Primo" />
+      <title>Rita e Cristóvão</title><!-- HEAD_svelte-e4we8m_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css");
+
+@font-face {
+  font-family: Migra;
+  src: url("https://mwobacdzcczmcevupefl.supabase.co/storage/v1/object/public/images/migra.ttf");
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("https://mwobacdzcczmcevupefl.supabase.co/storage/v1/object/public/images/PPNeueMontreal-Book.otf?t=2023-10-22T18%3A55%3A01.233Z");
+}
+
+html{
+  font-size: 112.5%;
+}
+
+:root{
+  --color: #354658;
+  --color-accent: #eee;
+  --background: #eee;
+  --color-background: #354658;
+  --border-color: #354658;
+  --secondary-color-background: #cacccf;
+  --max-width: max(80%, 1000px);
+}
+
+#page {
+  font-family: "Neue Montreal";
+  color: var(--color);
+  line-height: 1.6; 
+  font-size: 1rem;
+  background: var(--background);
+}
+
+.section-container {
+  max-width: var(--max-width, 1000px);
+  margin: 0 auto;
+  padding: 3rem var(--padding, 1rem); 
+}
+
+.heading {
+  font-family: Migra;
+  font-size: clamp(1.2rem,3vw,4rem);
+  line-height: 1;
+  font-weight: 700;
+  margin: 0;
+}
+
+.accent-background {
+  background-color: var(--background);
+}
+
+.button {
+  color: var(--color-accent);
+  border-color: var(--color-background);
+  background: var(--color-background);
+  border-radius: 5px;
+  padding: 8px min(20px, 2vw);
+  transition: var(--transition);
+}
+
+.button:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  }
+
+.button.inverted {
+    background: transparent; 
+    color: var(--color-accent); 
+    border: 2px solid var(--color-accent);
+  }
+</style><!-- HEAD_svelte-e4we8m_END -->
+      <style>.section-container.svelte-m632h5.svelte-m632h5{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem;background-color:var(--background)}.logo.svelte-m632h5.svelte-m632h5{font-family:Migra;font-size:1.5rem;font-weight:600;line-height:1.2}.desktop-nav.svelte-m632h5.svelte-m632h5{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-m632h5 nav.svelte-m632h5{display:flex;gap:2rem}.desktop-nav.svelte-m632h5 nav a.link.svelte-m632h5{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-m632h5 nav a.link.svelte-m632h5:hover{border-color:initial}@media(min-width: 800px){.desktop-nav.svelte-m632h5.svelte-m632h5{display:flex
+}}.mobile-nav.svelte-m632h5.svelte-m632h5{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-m632h5.svelte-m632h5{display:none
+}}#popup.svelte-m632h5.svelte-m632h5{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-m632h5 button#close.svelte-m632h5{position:absolute;right:1rem;top:1rem}
+.section-container.svelte-118qdms.svelte-118qdms{background-color:var(--background);display:grid;justify-content:center}.card.svelte-118qdms.svelte-118qdms{padding:4rem clamp(2rem, 10vw, 7rem);border:1px solid var(--border-color, #eee);border-radius:var(--border-radius);text-align:center;display:grid}.heading.svelte-118qdms.svelte-118qdms{margin-bottom:1.5rem}.body.svelte-118qdms.svelte-118qdms{max-width:700px;margin-bottom:2.25rem}.buttons.svelte-118qdms.svelte-118qdms{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}.buttons.svelte-118qdms .button.svelte-118qdms{display:flex;align-items:center;gap:0.25rem}
+.section-container.svelte-gg6ehh.svelte-gg6ehh{display:flex;justify-content:space-between;flex-direction:column;align-items:center;gap:1rem;padding-top:1rem;padding-bottom:1rem}@media(min-width: 600px){.section-container.svelte-gg6ehh.svelte-gg6ehh{flex-direction:row
+}}nav.svelte-gg6ehh.svelte-gg6ehh{display:flex;gap:1rem;font-size:.875rem}nav.svelte-gg6ehh .link.svelte-gg6ehh{border-color:transparent}nav.svelte-gg6ehh .link.svelte-gg6ehh:hover{border-color:initial}.primo.svelte-gg6ehh.svelte-gg6ehh{font-weight:600;font-size:0.75rem}.primo.svelte-gg6ehh a.svelte-gg6ehh{text-decoration:underline}.social-links.svelte-gg6ehh.svelte-gg6ehh{display:none;gap:1.5rem;font-size:1.5rem}.social-links.svelte-gg6ehh a.svelte-gg6ehh{color:var(--color-accent, rebeccapurple);transition:var(--transition, 0.1s transform)}.social-links.svelte-gg6ehh a.svelte-gg6ehh:hover{transform:scale(1.1)}</style>
+    </head>
+    <body id="page">
+       
+<div class="section" id="section-e6d505d0"><div class="accent-background"><header class="section-container svelte-m632h5"><div class="desktop-nav svelte-m632h5"><a href="/" class="logo svelte-m632h5">Rita e Cristóvão</a>
+    <nav class="svelte-m632h5"><a class="link svelte-m632h5" href="/">Início</a><a class="link svelte-m632h5" href="/rsff">R.S.F.F.</a><a class="link svelte-m632h5" href="/mais-info">Mais informações</a></nav></div>
+  <div class="mobile-nav svelte-m632h5"><a href="/" class="logo svelte-m632h5">Rita e Cristóvão</a>
+    <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START --><g id="iconifySvelte0"><g id="iconifySvelte1"><g id="iconifySvelte2" fill="currentColor"><rect width="18" height="2" x="3" y="11" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="16" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="6" rx=".95" ry=".95"/></g></g></g><!-- HTML_TAG_END --></svg></button>
+    </div></header></div></div> 
+<div class="section" id="section-b1004ee2"><section class="accent-background"><div class="section-container svelte-118qdms"><div class="card svelte-118qdms"><h2 class="heading svelte-118qdms">Obrigado</h2>
+    <div class="body svelte-118qdms"><!-- HTML_TAG_START --><p>Obrigado pelo presente!</p><!-- HTML_TAG_END --></div>
+    <div class="buttons svelte-118qdms"><a class="button svelte-118qdms" href="/">
+        <span>Voltar à página inicial</span>
+      </a></div></div></div></section></div> 
+<div class="section" id="section-a3c913bc"><footer class="section-container svelte-gg6ehh"><nav class="svelte-gg6ehh"><a class="link svelte-gg6ehh" href="/">Início</a><a class="link svelte-gg6ehh" href="/rsff">R.S.F.F.</a><a class="link svelte-gg6ehh" href="/mais-info">Mais informações</a></nav>
+  <span class="primo svelte-gg6ehh"><a href="https://primo.so" class="svelte-gg6ehh">Primo</a> Powered </span>
+  <div class="social-links svelte-gg6ehh"></div></footer></div> 
+
+      <script type="module">
+      import('/_symbols/7123dca8-d8fc-4576-8e54-a93e9915b953.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-e6d505d0'),
+              hydrate: true,
+              props: {"logo":{"image":{"alt":"","src":"","url":"","size":null},"title":"Rita e Cristóvão"},"site_nav":[{"link":{"url":"/","label":"Início","active":false}},{"link":{"url":"/rsff","label":"R.S.F.F.","active":false}},{"link":{"url":"/mais-info","label":"Mais informações","active":false}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/b3756f47-f0d6-4289-ad86-6684a0e6b436.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-a3c913bc'),
+              hydrate: true,
+              props: {"nav":[{"link":{"url":"/","label":"Início","active":false}},{"link":{"url":"/rsff","label":"R.S.F.F.","active":false}},{"link":{"url":"/mais-info","label":"Mais informações","active":false}}],"social":[]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/6b999594-b855-4162-ae16-cafb9608fe8a.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-b1004ee2'),
+              hydrate: true,
+              props: {"heading":"Obrigado","body":{"html":"<p>Obrigado pelo presente!</p>","markdown":"Obrigado pelo presente!\n\n"},"buttons":[{"icon":"","link":{"url":"/","label":"Voltar à página inicial","active":false}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    </script>
+    </body>
+  </html>
+  
