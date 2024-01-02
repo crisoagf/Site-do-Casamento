@@ -1,4 +1,4 @@
-// Site Navigation - Updated December 30, 2023
+// Site Navigation - Updated January 2, 2024
 function noop() { }
 const identity = x => x;
 function assign(tar, src) {
